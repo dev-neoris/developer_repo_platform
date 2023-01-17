@@ -11,10 +11,14 @@ import config from './config';
       envFilePath: ['.env'],
       load: [config],
       validationSchema: Joi.object({
-        APP_ENV: Joi.string().required().valid('dev', 'stage', 'test', 'prod').default('dev'),
+        APP_ENV: Joi.string()
+          .required()
+          .valid('dev', 'stage', 'test', 'prod')
+          .default('dev'),
         APP_NAME: Joi.string().required().default('developer_repo_platform'),
-        APP_PORT: Joi.number().required().default(8080), 
-        CONNECTION_STRING_CDB: Joi.string().required().default('') 
+        APP_PORT: Joi.number().required().default(8080),
+        CONNECTION_STRING_CDB: Joi.string().required().default(''),
+        MIN__COVERAGE_PERCENT: Joi.number().required().default('75'),
       }),
     }),
   ],

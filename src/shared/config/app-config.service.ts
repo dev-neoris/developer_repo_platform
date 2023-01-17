@@ -3,11 +3,10 @@ import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class AppConfigService {
-
   constructor(private readonly configService: ConfigService) {}
 
   getStringEnv(name: string): string {
-    return this.configService.get<string>(`app.${name}`);;
+    return this.configService.get<string>(`app.${name}`);
   }
 
   getBooleanEnv(name: string): boolean {
@@ -19,5 +18,4 @@ export class AppConfigService {
     const integerEnv = this.configService.get<string>(`app.${name}`);
     return Number(integerEnv);
   }
-
 }

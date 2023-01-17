@@ -16,13 +16,13 @@ export class LoggerConfigService {
       exitOnError: false,
 
       transports: [
-        new transports.Console({ 
+        new transports.Console({
           format: format.combine(
             format.timestamp(),
             format.ms(),
-            format.errors({ stack: true }), 
+            format.errors({ stack: true }),
             nestWinstonModuleUtilities.format.nestLike(
-              this.configService.getStringEnv("appName")
+              this.configService.getStringEnv('appName'),
             ),
           ),
         }),
