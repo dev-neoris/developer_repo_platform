@@ -22,6 +22,9 @@
 - COCKROACHDB
 - JEST
 
+## Documentation
+
+[Swagger](https://localhost:8080/api) Api Documentation swagger run proyect in local.
 
 ## Installation
 
@@ -49,7 +52,4 @@ $ npm run test
 ```
 
 
-## Documentation
-
-[Swagger](https://localhost:8080/api) Api Documentation swagger.
 
